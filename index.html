@@ -199,8 +199,66 @@
     <!-- Platform logos + phone -->
     <div class="relative w-full flex items-center justify-center" style="height:496px;">
       <!-- Phone mockup -->
-      <div class="relative z-10">
-        <img src="https://www.figma.com/api/mcp/asset/534d976a-3735-423b-8026-dcbf697e37a3" class="h-[460px] object-contain" alt="Goodvice app">
+      <div class="relative z-10 flex-shrink-0" style="width:249px;height:512px;">
+        <!-- White screen background -->
+        <div class="absolute bg-white" style="left:8px;top:30px;right:10px;bottom:8px;border-radius:38px;"></div>
+
+        <!-- Platform icons row (top bar) -->
+        <div class="absolute flex" style="top:34px;left:19px;">
+          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/4e51bde9-f7cb-4293-9b8a-e6c0b308fd41" style="width:16px;height:16px;display:block;" alt="Avito"></div>
+          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/c0a3ff07-1687-4780-86d6-3ebc0ff92016" style="width:16px;height:16px;display:block;" alt="Yandex Maps"></div>
+          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/f397f5c9-b2d2-4a2a-8ead-63fffe335fc6" style="width:16px;height:16px;display:block;" alt="Platform"></div>
+          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/ca6192fa-79a0-41c0-8228-975523298e80" style="width:16px;height:16px;display:block;" alt="Zoon"></div>
+        </div>
+
+        <!-- Rating header -->
+        <div class="absolute flex items-center justify-between" style="top:74px;left:8px;width:234px;padding:14px;border-bottom:1px solid #e2e8f0;">
+          <div class="flex items-center" style="gap:2px;">
+            <img src="https://www.figma.com/api/mcp/asset/1a60a8f9-7219-4cd6-bcc9-f0e41508071b" style="width:18px;height:18px;" alt="">
+            <span style="font-family:Manrope,sans-serif;font-weight:600;font-size:17px;color:#1e293b;letter-spacing:-0.34px;">5.0</span>
+          </div>
+          <span style="font-family:Manrope,sans-serif;font-weight:600;font-size:11px;color:#475569;">1256 отзывов</span>
+        </div>
+
+        <!-- Reviews area -->
+        <div class="absolute overflow-hidden" style="top:117px;left:7px;width:235px;height:390px;border-bottom-left-radius:35px;border-bottom-right-radius:35px;">
+          <!-- Card 1 -->
+          <div class="absolute" style="left:15px;top:29px;width:139px;height:108px;">
+            <img src="https://www.figma.com/api/mcp/asset/9f48e383-6e93-4dab-91ec-b03cd1754173" class="absolute" style="left:31px;top:27px;width:108px;height:77px;" alt="">
+            <img src="https://www.figma.com/api/mcp/asset/515dcc96-e50e-41db-bf49-a07476ea60bb" class="absolute" style="left:61px;top:42px;width:30px;height:6px;" alt="">
+            <div class="absolute flex flex-col" style="left:61px;top:55px;width:57px;gap:4px;">
+              <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
+              <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
+              <div style="background:#e2e8f0;height:4px;border-radius:999px;width:47px;"></div>
+            </div>
+            <img src="https://www.figma.com/api/mcp/asset/664376e8-9325-4a32-8b25-0558dd33fa9f" class="absolute rounded-full" style="left:0;top:0;width:57px;height:57px;object-fit:cover;" alt="">
+          </div>
+          <!-- Card 2 -->
+          <div class="absolute" style="left:15px;top:219px;width:139px;height:108px;">
+            <img src="https://www.figma.com/api/mcp/asset/3b057d3a-4519-4371-abcf-49edc1ce47d2" class="absolute" style="left:31px;top:27px;width:108px;height:77px;" alt="">
+            <img src="https://www.figma.com/api/mcp/asset/e683dfe6-bdd8-46e4-9c1b-9b055543a8ac" class="absolute" style="left:61px;top:43px;width:30px;height:6px;" alt="">
+            <div class="absolute flex flex-col" style="left:61px;top:56px;width:57px;gap:4px;">
+              <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
+              <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
+              <div style="background:#e2e8f0;height:4px;border-radius:999px;width:47px;"></div>
+            </div>
+            <img src="https://www.figma.com/api/mcp/asset/18f356ed-b34a-4632-8176-fc7d13207ed2" class="absolute rounded-full" style="left:0;top:0;width:57px;height:57px;object-fit:cover;" alt="">
+          </div>
+          <!-- Card 3 -->
+          <div class="absolute" style="left:87px;top:124px;width:137px;height:108px;">
+            <img src="https://www.figma.com/api/mcp/asset/3b057d3a-4519-4371-abcf-49edc1ce47d2" class="absolute" style="left:0;top:26px;width:108px;height:77px;" alt="">
+            <img src="https://www.figma.com/api/mcp/asset/e683dfe6-bdd8-46e4-9c1b-9b055543a8ac" class="absolute" style="left:30px;top:42px;width:30px;height:6px;" alt="">
+            <div class="absolute flex flex-col" style="left:30px;top:55px;width:57px;gap:4px;">
+              <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
+              <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
+              <div style="background:#e2e8f0;height:4px;border-radius:999px;width:47px;"></div>
+            </div>
+            <img src="https://www.figma.com/api/mcp/asset/00069f46-6949-4eac-9b9d-e92c32ee38da" class="absolute rounded-full" style="left:80px;top:0;width:57px;height:57px;object-fit:cover;" alt="">
+          </div>
+        </div>
+
+        <!-- Phone frame overlay (on top of content) -->
+        <img src="https://www.figma.com/api/mcp/asset/41ca0dd9-3550-45d7-a135-5fe0b677e8ff" class="absolute inset-0 w-full h-full object-contain pointer-events-none" style="z-index:20;" alt="Phone">
       </div>
       <!-- Platform logos scattered -->
       <div class="absolute left-[5%] top-[50%] -translate-y-1/2 bg-white p-5 rounded-[20px] shadow-[0px_25px_50px_rgba(121,138,163,0.15),0px_1px_10px_rgba(146,155,187,0.1)]">
