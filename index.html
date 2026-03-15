@@ -197,23 +197,26 @@
       <button class="border-2 border-[#f1f5f9] text-[#475569] text-sm rounded-full px-5 py-3 font-normal hover:border-[#083344] transition-colors">Маркетплейсы</button>
     </div>
     <!-- Platform logos + phone -->
-    <div class="relative w-full flex items-center justify-center" style="height:496px;">
-      <!-- Phone mockup -->
-      <div class="relative z-10 flex-shrink-0" style="width:249px;height:512px;">
-        <!-- Phone frame FIRST (behind content) -->
-        <img src="https://www.figma.com/api/mcp/asset/41ca0dd9-3550-45d7-a135-5fe0b677e8ff" class="absolute inset-0 w-full h-full object-contain pointer-events-none" style="z-index:1;" alt="Phone">
+    <div class="relative w-full" style="height:496px;overflow:visible;">
+      <!-- Phone mockup: centered, overflow:visible so shadow extends beyond -->
+      <div class="absolute overflow-visible" style="left:50%;top:50%;transform:translate(-50%,-50%);width:249px;height:512px;z-index:10;">
+        <!-- Phone frame image: extends beyond container via negative insets (shadow) -->
+        <div class="absolute" style="inset:0 0.33% 0 0.03%;">
+          <div class="absolute" style="inset:-8.27% -17.04% -13.36% -33.38%;">
+            <img src="https://www.figma.com/api/mcp/asset/41ca0dd9-3550-45d7-a135-5fe0b677e8ff" style="display:block;width:100%;height:100%;max-width:none;" alt="">
+          </div>
+        </div>
 
-        <!-- Screen content ON TOP (later in DOM = higher stack) -->
-        <!-- Platform icons row -->
-        <div class="absolute flex" style="top:34px;left:19px;z-index:2;">
-          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/4e51bde9-f7cb-4293-9b8a-e6c0b308fd41" style="width:16px;height:16px;display:block;" alt="Avito"></div>
-          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/c0a3ff07-1687-4780-86d6-3ebc0ff92016" style="width:16px;height:16px;display:block;" alt="Yandex Maps"></div>
-          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/f397f5c9-b2d2-4a2a-8ead-63fffe335fc6" style="width:16px;height:16px;display:block;" alt="Platform"></div>
-          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/ca6192fa-79a0-41c0-8228-975523298e80" style="width:16px;height:16px;display:block;" alt="Zoon"></div>
+        <!-- Platform icons row (top bar of screen) -->
+        <div class="absolute flex" style="top:34px;left:19px;">
+          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/4e51bde9-f7cb-4293-9b8a-e6c0b308fd41" style="width:16px;height:16px;display:block;" alt=""></div>
+          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/c0a3ff07-1687-4780-86d6-3ebc0ff92016" style="width:16px;height:16px;display:block;" alt=""></div>
+          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/f397f5c9-b2d2-4a2a-8ead-63fffe335fc6" style="width:16px;height:16px;display:block;" alt=""></div>
+          <div style="padding:10px;"><img src="https://www.figma.com/api/mcp/asset/ca6192fa-79a0-41c0-8228-975523298e80" style="width:16px;height:16px;display:block;" alt=""></div>
         </div>
 
         <!-- Rating header -->
-        <div class="absolute flex items-center justify-between" style="top:74px;left:8px;width:234px;padding:14px;border-bottom:1px solid #e2e8f0;z-index:2;">
+        <div class="absolute flex items-center justify-between" style="top:74px;left:8px;width:234px;padding:14px;border-bottom:1px solid #e2e8f0;">
           <div class="flex items-center" style="gap:2px;">
             <img src="https://www.figma.com/api/mcp/asset/1a60a8f9-7219-4cd6-bcc9-f0e41508071b" style="width:18px;height:18px;" alt="">
             <span style="font-family:Manrope,sans-serif;font-weight:600;font-size:17px;color:#1e293b;letter-spacing:-0.34px;">5.0</span>
@@ -221,13 +224,13 @@
           <span style="font-family:Manrope,sans-serif;font-weight:600;font-size:11px;color:#475569;">1256 отзывов</span>
         </div>
 
-        <!-- Reviews area -->
-        <div class="absolute overflow-hidden" style="top:117px;left:7px;width:235px;height:390px;border-bottom-left-radius:35px;border-bottom-right-radius:35px;z-index:2;">
+        <!-- Reviews area (screen content) -->
+        <div class="absolute overflow-hidden" style="top:117px;left:7px;width:235px;height:390px;border-bottom-left-radius:35px;border-bottom-right-radius:35px;">
           <!-- Card 1 -->
           <div class="absolute" style="left:15px;top:29px;width:139px;height:108px;">
             <img src="https://www.figma.com/api/mcp/asset/9f48e383-6e93-4dab-91ec-b03cd1754173" class="absolute" style="left:31px;top:27px;width:108px;height:77px;" alt="">
             <img src="https://www.figma.com/api/mcp/asset/515dcc96-e50e-41db-bf49-a07476ea60bb" class="absolute" style="left:61px;top:42px;width:30px;height:6px;" alt="">
-            <div class="absolute flex flex-col" style="left:61px;top:55px;width:57px;gap:4px;">
+            <div class="absolute" style="left:61px;top:55px;width:57px;display:flex;flex-direction:column;gap:4px;">
               <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
               <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
               <div style="background:#e2e8f0;height:4px;border-radius:999px;width:47px;"></div>
@@ -238,7 +241,7 @@
           <div class="absolute" style="left:15px;top:219px;width:139px;height:108px;">
             <img src="https://www.figma.com/api/mcp/asset/3b057d3a-4519-4371-abcf-49edc1ce47d2" class="absolute" style="left:31px;top:27px;width:108px;height:77px;" alt="">
             <img src="https://www.figma.com/api/mcp/asset/e683dfe6-bdd8-46e4-9c1b-9b055543a8ac" class="absolute" style="left:61px;top:43px;width:30px;height:6px;" alt="">
-            <div class="absolute flex flex-col" style="left:61px;top:56px;width:57px;gap:4px;">
+            <div class="absolute" style="left:61px;top:56px;width:57px;display:flex;flex-direction:column;gap:4px;">
               <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
               <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
               <div style="background:#e2e8f0;height:4px;border-radius:999px;width:47px;"></div>
@@ -249,7 +252,7 @@
           <div class="absolute" style="left:87px;top:124px;width:137px;height:108px;">
             <img src="https://www.figma.com/api/mcp/asset/3b057d3a-4519-4371-abcf-49edc1ce47d2" class="absolute" style="left:0;top:26px;width:108px;height:77px;" alt="">
             <img src="https://www.figma.com/api/mcp/asset/e683dfe6-bdd8-46e4-9c1b-9b055543a8ac" class="absolute" style="left:30px;top:42px;width:30px;height:6px;" alt="">
-            <div class="absolute flex flex-col" style="left:30px;top:55px;width:57px;gap:4px;">
+            <div class="absolute" style="left:30px;top:55px;width:57px;display:flex;flex-direction:column;gap:4px;">
               <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
               <div style="background:#e2e8f0;height:4px;border-radius:999px;"></div>
               <div style="background:#e2e8f0;height:4px;border-radius:999px;width:47px;"></div>
@@ -258,42 +261,69 @@
           </div>
         </div>
       </div>
-      <!-- Platform logos scattered -->
-      <div class="absolute left-[5%] top-[50%] -translate-y-1/2 bg-white p-5 rounded-[20px] shadow-[0px_25px_50px_rgba(121,138,163,0.15),0px_1px_10px_rgba(146,155,187,0.1)]">
-        <img src="https://www.figma.com/api/mcp/asset/3127cfe6-d764-4b75-9228-b97fd25dd9e7" class="w-12 h-12 object-contain" alt="Prodoctorov">
+      <!-- Platform logos — positions from Figma 1920×496px canvas converted to % -->
+      <!-- LEFT SIDE -->
+      <!-- Zoom: left=165, top=112 → 8.59%, 22.58% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:8.59%;top:22.58%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/7a8b7a8e-a6a5-4a28-ac36-00861ed38d3c" style="width:32px;height:32px;display:block;" alt="Zoon">
       </div>
-      <div class="absolute left-[12%] top-[22%] bg-white p-5 rounded-[20px] shadow-lg">
-        <img src="https://www.figma.com/api/mcp/asset/6222ff5c-f80a-4401-ad1f-3a4d74eefdd8" class="w-12 h-12 object-contain" alt="Avito">
+      <!-- Prodoctorov: left=68, top=280 → 3.54%, 56.45% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:3.54%;top:56.45%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/ad870805-c4e2-4f4e-9f57-ab4cc7f186e2" style="width:32px;height:32px;display:block;" alt="Prodoctorov">
       </div>
-      <div class="absolute left-[22%] top-[78%] bg-white p-5 rounded-[20px] shadow-lg">
-        <img src="https://www.figma.com/api/mcp/asset/1c381284-14d4-4954-abbb-08be1a1420e4" class="w-12 h-12 object-contain" alt="Yandex Maps">
+      <!-- Avito: left=280, top=215 → 14.58%, 43.35% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:14.58%;top:43.35%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/3f47452e-d1a7-4d0c-abe8-f7d06c8a6752" style="width:48px;height:48px;display:block;" alt="Avito">
       </div>
-      <div class="absolute left-[22%] top-[10%] bg-white p-5 rounded-[20px] shadow-lg">
-        <img src="https://www.figma.com/api/mcp/asset/28e440bc-ab1e-42d0-8c70-4be20ab5a0c5" class="w-8 h-8 object-contain" alt="WB">
+      <!-- Wildberries: left=416, top=53 → 21.67%, 10.69% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:21.67%;top:10.69%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/3f62c321-8d23-42eb-b4cb-dcebb2058030" style="width:32px;height:32px;display:block;" alt="Wildberries">
       </div>
-      <div class="absolute right-[22%] top-[8%] bg-white p-5 rounded-[20px] shadow-lg">
-        <img src="https://www.figma.com/api/mcp/asset/7b3be00a-3d6a-4cb8-9ff9-f42e89e7e616" class="w-12 h-12 object-contain" alt="Tripadvisor">
+      <!-- Яндекс Карты big card: left=518, top=264 → 26.98%, 53.23% -->
+      <div class="absolute bg-white rounded-[20px] flex flex-col items-center" style="left:26.98%;top:53.23%;padding:24px;box-shadow:0px 1px 10px 0px rgba(146,155,187,.1),0px 25px 50px 0px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/8c08bde1-c193-47e9-bf6f-65b5c09af0a4" style="width:48px;height:48px;display:block;" alt="Яндекс Карты">
       </div>
-      <div class="absolute right-[28%] top-[28%] bg-white p-5 rounded-[20px] shadow-lg">
-        <img src="https://www.figma.com/api/mcp/asset/9af782d1-53fe-4b66-9924-effb8c998bca" class="w-12 h-12 object-contain" alt="Google Maps">
+      <!-- Label: Яндекс карты — left=514, top=384 → 26.77%, 77.42% -->
+      <p class="absolute" style="left:26.77%;top:77.42%;font-family:Manrope,sans-serif;font-size:16px;line-height:1.4;color:#475569;white-space:nowrap;">Яндекс карты</p>
+      <!-- Яндекс Market: left=669, top=60 → 34.84%, 12.10% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:34.84%;top:12.10%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/37c5ed89-5430-4e83-87fc-e6e04667c929" style="width:48px;height:48px;display:block;" alt="Яндекс Маркет">
       </div>
-      <div class="absolute right-[28%] top-[65%] bg-white p-5 rounded-[20px] shadow-lg">
-        <img src="https://www.figma.com/api/mcp/asset/cccc1c83-7ebc-41ec-9dc1-c3b4a925f098" class="w-12 h-12 object-contain" alt="Booking">
+      <!-- 2GIS: left=713, top=384 → 37.14%, 77.42% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:37.14%;top:77.42%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/1e5b2dd0-fdc7-454d-b1ac-4ace962657f4" style="width:32px;height:32px;display:block;" alt="2GIS">
       </div>
-      <div class="absolute right-[12%] top-[45%] bg-white p-5 rounded-[20px] shadow-lg">
-        <img src="https://www.figma.com/api/mcp/asset/de23da66-447e-471f-af8c-256c77e4503a" class="w-12 h-12 object-contain" alt="Google">
+
+      <!-- RIGHT SIDE -->
+      <!-- TripAdvisor: left=1149, top=40 → 59.84%, 8.06% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:59.84%;top:8.06%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/7851313c-38c5-425b-88ee-a37868cb0c53" style="width:48px;height:48px;display:block;" alt="TripAdvisor">
       </div>
-      <div class="absolute right-[5%] top-[20%] bg-white p-5 rounded-[20px] shadow-lg">
-        <img src="https://www.figma.com/api/mcp/asset/43a4d19a-15be-458c-8cac-25db48d42d3e" class="w-8 h-8 object-contain" alt="Sber">
+      <!-- Google Maps big card: left=1331, top=142 → 69.32%, 28.63% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:69.32%;top:28.63%;padding:24px;box-shadow:0px 1px 10px 0px rgba(146,155,187,.1),0px 25px 50px 0px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/14ca5396-19ac-474b-93b8-40085155be7b" style="width:48px;height:48px;display:block;" alt="Google Maps">
       </div>
-      <div class="absolute left-[35%] top-[82%] bg-white p-5 rounded-[20px] shadow-lg">
-        <img src="https://www.figma.com/api/mcp/asset/1b39f533-f04f-4653-a7c0-2ae07f83945c" class="w-8 h-8 object-contain" alt="2GIS">
+      <!-- Label: Google maps → 69.32%, 52.82% -->
+      <p class="absolute" style="left:69.32%;top:52.82%;font-family:Manrope,sans-serif;font-size:16px;line-height:1.4;color:#475569;white-space:nowrap;">Google maps</p>
+      <!-- Booking: left=1211, top=334 → 63.07%, 67.34% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:63.07%;top:67.34%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/087044b0-ed6d-470c-9e9f-e598d960b885" style="width:48px;height:48px;display:block;" alt="Booking">
       </div>
-      <div class="absolute right-[35%] top-[82%] bg-white p-5 rounded-[20px] shadow-lg">
-        <img src="https://www.figma.com/api/mcp/asset/ecdbcbdc-3ebf-456c-90d2-a30b346007bb" class="w-8 h-8 object-contain" alt="Flamp">
+      <!-- Google multicolor: left=1540, top=70 → 80.21%, 14.11% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:80.21%;top:14.11%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/f76e2157-de46-4c21-88ef-0ef2c50e00f1" style="width:48px;height:48px;display:block;" alt="Google">
       </div>
-      <div class="absolute left-[38%] top-[5%] bg-white p-5 rounded-[20px] shadow-lg">
-        <img src="https://www.figma.com/api/mcp/asset/a99970ea-f597-4ff0-b90d-7bf373ad7689" class="w-8 h-8 object-contain" alt="Zoon">
+      <!-- Flamp: left=1443, top=298 → 75.16%, 60.08% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:75.16%;top:60.08%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/e1bdfa1b-f32a-4f08-85f3-b051b5ac09f3" style="width:32px;height:32px;display:block;" alt="Flamp">
+      </div>
+      <!-- Yandex (Group7): left=1669, top=314 → 86.93%, 63.31% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:86.93%;top:63.31%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/7080f565-a4ab-4580-9d28-d907b37bd677" style="width:28px;height:32px;display:block;" alt="Yandex">
+      </div>
+      <!-- Sber: left=1779, top=158 → 92.66%, 31.85% -->
+      <div class="absolute bg-white rounded-[20px]" style="left:92.66%;top:31.85%;padding:20px;box-shadow:0px 1px 10px -1px rgba(146,155,187,.1),0px 25px 50px -12px rgba(121,138,163,.15);">
+        <img src="https://www.figma.com/api/mcp/asset/f3136943-ac4d-4875-91ea-495cfc008608" style="width:32px;height:32px;display:block;" alt="Сбер Здоровье">
       </div>
     </div>
   </div>
